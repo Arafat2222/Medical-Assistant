@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --primaryColor: #2AA8FF;
+    --secondaryColor: #80D0C7;
+    --border: #9CA3AF;
+    --inputColor: #F0F0F0;
+    --inputText: #ABB6C7;
+    --appointmentBg: #8B98B8;
+}
+
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    background-color: #F5F5F5;
+    color: black;
+}
+
+.lobster-two-bold {
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 
+@keyframes leftSlider {
+    0% {
+        left: 2rem;
+    }
+
+    25% {
+        left: 4rem;
+    }
+
+    50% {
+        left: 6rem;
+    }
+
+    75% {
+        left: 4rem;
+    }
+
+    100% {
+        left: 0rem;
+    }
+} */
+
+/* @keyframes rightSlider {
+    0% {
+        left: 2rem;
+    }
+
+    25% {
+        left: 4rem;
+    }
+
+    50% {
+        left: 6rem;
+    }
+
+    75% {
+        left: 4rem;
+    }
+
+    100% {
+        left: 0rem;
+    }
+} */
+
+@keyframes rightSlider {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes leftSlider {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes topSlider {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+}
+
+@keyframes downSlider {
+    from {
+        transform: translateY(200%);
+    }
+
+    to {
+        transform: translateY(0%);
+
+    }
+}
+
+@keyframes grow {
+    from {
+        scale: .25;
+        opacity: .25;
+    }
+
+    to {
+        scale: 1;
+        opacity: 1;
+        /* rgb(0, 204, 136) */
+    }
+}
+
+@keyframes fade-out {
+    from {
+        scale: 1;
+        opacity: 1;
+    }
+
+    to {
+        scale: 0;
+        opacity: 0;
+        /* rgb(0, 204, 136) */
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateY(-40px);
+    }
+}
+
+.rightSlider {
+    animation: rightSlider 1500ms 1;
+}
+
+.leftSlider {
+    animation: leftSlider 1500ms 1;
+}
+
+.topSlider {
+    animation: topSlider 2500ms 1;
+}
+
+.downSlider {
+    animation: downSlider 2500ms 1;
+}
+
+.downSliderFast {
+    animation: downSlider 1000ms 1;
+}
+
+.grow {
+    animation: grow 1000ms 1;
+}
+
+.fade-out {
+    animation: fade-out 1000ms 1;
+    animation-delay: 500;
+}
+
+.bouncer {
+    animation: bounce 1000ms alternate infinite cubic-bezier(.2, .65, .6, 1);
+}
